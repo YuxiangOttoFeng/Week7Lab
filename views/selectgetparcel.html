@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="poms.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <h1>Welcome to the POMS APP(Week6)</h1>
+        </div>
+        <a type="button" class="btn btn-primary btn-lg" href="/">Home</a>&nbsp;&nbsp;&nbsp;
+        <a type="button" class="btn btn-primary btn-lg" href="/newparcel">Add New Parcel</a>&nbsp;&nbsp;&nbsp;       
+        <a type="button" class="btn btn-primary btn-lg" href="/selectgetparcel">List Parcels</a> &nbsp;&nbsp;&nbsp;    
+        <a type="button" class="btn btn-primary btn-lg" href="/delparcel">Delete Parcel</a> &nbsp;&nbsp;&nbsp;      
+        <a type="button" class="btn btn-primary btn-lg" href="/updateparcel">Update Parcel</a> &nbsp;&nbsp;&nbsp;      
+        <div style="border-top: 1px solid #dddddd"></div>
+
+
+        <h1>Select Parcels</h1></br>
+        <form action="/getallparcel" method="POST">
+            <input type="submit" value="Show all value" /> </br>
+        </form>
+        <p></p>
+        <br>
+        <br>
+
+        <form action="/getallparcelbysender" method="POST">
+            sender: <input type="text"  name="sender" /> </br>
+            <input type="submit" value="Show" /> </br>
+        </form>
+        <p></p>
+        <br>
+        <br>
+        
+        <form action="/getallparcelbyweightrange" method="POST">
+            <p>weight range: </p>
+            min: <input type="number"  name="min" /> </br>
+            max: <input type="number"  name="max" /> </br> 
+            <input type="submit" value="Show" /> </br>
+        </form>
+        <p></p>
+        
+
+          
+        
+    </body>
+</html>

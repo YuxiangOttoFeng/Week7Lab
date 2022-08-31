@@ -1,0 +1,61 @@
+<html>
+    <style>
+        /* table, th, td {
+          border:1px solid black;
+        } */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even){background-color: #f2f2f2}
+
+        th {
+            background-color: #aa6a04;
+            color: rgb(184, 20, 20);
+        }
+    </style>
+    <head>
+        <link rel="stylesheet" href="poms.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <h1>Welcome to the POMS APP(Week6)</h1>
+        </div>
+        <a type="button" class="btn btn-primary btn-lg" href="/">Home</a>&nbsp;&nbsp;&nbsp;
+        <a type="button" class="btn btn-primary btn-lg" href="/newparcel">Add New Parcel</a>&nbsp;&nbsp;&nbsp;       
+        <a type="button" class="btn btn-primary btn-lg" href="/selectgetparcel">List Parcels</a> &nbsp;&nbsp;&nbsp;    
+        <a type="button" class="btn btn-primary btn-lg" href="/delparcel">Delete Parcel</a> &nbsp;&nbsp;&nbsp;      
+        <a type="button" class="btn btn-primary btn-lg" href="/updateparcel">Update Parcel</a> &nbsp;&nbsp;&nbsp;      
+        <div style="border-top: 1px solid #dddddd"></div>
+
+
+          <table class="table table-hover table-dark" >
+            <tr>
+                <td>id</td>
+                <td>sender</td>
+                <td>address</td>
+                <td>weight</td>
+                <td>fragile</td>
+            </tr>
+            <% for(let i=0;i<db_list.length;i++){ %>
+              <tr>
+                  <td><%= db_list[i]._id %></td>
+                  <td><%= db_list[i].sender %></td>
+                  <td><%= db_list[i].address %> </td>
+                  <td><%= db_list[i].weight %></td>
+                  <td><%= db_list[i].isFeagile %></td>
+                </tr>
+              <%}%>
+          </table>
+
+          
+        
+    </body>
+</html>

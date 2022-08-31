@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <head>
+            <link rel="stylesheet" href="poms.css">
+            <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+            <div class="jumbotron text-center">
+                <h1>Welcome to the POMS APP(Week6)</h1>
+            </div>
+            <a type="button" class="btn btn-primary btn-lg" href="/">Home</a>&nbsp;&nbsp;&nbsp;
+            <a type="button" class="btn btn-primary btn-lg" href="/newparcel">Add New Parcel</a>&nbsp;&nbsp;&nbsp;       
+            <a type="button" class="btn btn-primary btn-lg" href="/selectgetparcel">List Parcels</a> &nbsp;&nbsp;&nbsp;    
+            <a type="button" class="btn btn-primary btn-lg" href="/delparcel">Delete Parcel</a> &nbsp;&nbsp;&nbsp;      
+            <a type="button" class="btn btn-primary btn-lg" href="/updateparcel">Update Parcel</a> &nbsp;&nbsp;&nbsp;      
+            <div style="border-top: 1px solid #dddddd"></div>
+            
+        </head>
+        <h1>New Parcel</h1><p></p>
+        <form method="post" action="newparcelpost">
+            Sender<input type="text" name="sender"/><br/>
+            Address<input type="text" name="address"/><br/>
+            Weight<input type="number" name="weight"/><br/>
+            isFeagile<select name="isFeagile" id="isFeagile">
+                <option value="true">yes</option>
+                <option value="false">no</option>
+            </select>
+            <p></p>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
