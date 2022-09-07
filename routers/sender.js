@@ -5,15 +5,15 @@ const Parcel = require("../models/parcel");
 
 module.exports = {
 
-    // getAll: function (req, res) {
-    //     Actor.find(function (err, actors) {
-    //         if (err) {
-    //             return res.status(404).json(err);
-    //         } else {
-    //             res.json(actors);
-    //         }
-    //     });
-    // },
+    getAll: function (req, res) {
+        Sender.find(function (err, senders) {
+            if (err) {
+                return res.status(404).json(err);
+            } else {
+                res.json(senders);
+            }
+        });
+    },
 
     createOne: function (req, res) {
         let newSenderDetails = req.body;

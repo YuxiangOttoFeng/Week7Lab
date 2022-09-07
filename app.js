@@ -26,6 +26,7 @@ app.post('/sender', senders.createOne);
 app.delete('/sender', senders.deleteOne);
 app.put('/sender', senders.updateOne);
 app.post('/sender/parcel', senders.addParcel);
+app.get('/sender/getall',senders.getAll);
 
 
 // app.post('/sender', senders.createOne);
