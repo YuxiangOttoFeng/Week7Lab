@@ -32,4 +32,5 @@ app.get('/sender/getall',senders.getAll);
 // app.post('/sender', senders.createOne);
 app.get('/parcel', parcels.getAll);
 app.put('/parcel', parcels.updateOne);
+app.delete('/parcel',parcels.deleteOne)
 
